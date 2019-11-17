@@ -98,3 +98,53 @@ body {
     z-index: 0;
     transform: translate(-50%, -47.5%) scale(3.5);
 }
+
+.glitch:before, .glitch:after {
+    display: block;
+    content: 'APOGEE';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+}
+.glitch:after {
+    color: #f0f;
+    text-shadow: 2px 2px black;
+    z-index: -2;
+    animation: glitch-left-2 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+.glitch:before {
+    color: #0ff;
+    z-index: -1;
+    animation: glitch-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+@keyframes glitch-left {
+    0% {
+        transform: translate(0);
+    }
+    33% {
+        transform: translate(-4px, 2px);
+    }
+    66% {
+        transform: translate(4px, -2px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+@keyframes glitch-left-2 {
+    0% {
+        transform: translate(0);
+    }
+    33% {
+        transform: translate(-4px, -2px);
+    }
+    66% {
+        transform: translate(4px, 2px);
+    }
+    to {
+        transform: translate(0);
+    }
+  }
