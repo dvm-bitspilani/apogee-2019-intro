@@ -68,3 +68,7 @@ body {
     font-weight: bold;
     font-family: 'Teko', sans-serif;
 }
+
+.footer .social i {
+    margin: 0 8px;
+}
