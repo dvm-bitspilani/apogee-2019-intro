@@ -1,15 +1,20 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
+    background: transparent radial-gradient(closest-side at 49% 1%, #00A2C1 0%, #006D96 18%, #003E70 37%, #001C55 53%, #000744 67%, #00003E 76%) 0% 0% no-repeat padding-box;
 }
 
 .page-wrapper {
     width: 100%;
     height: 100vh;
-    background: transparent radial-gradient(closest-side at 49% 1%, #00A2C1 0%, #006D96 18%, #003E70 37%, #001C55 53%, #000744 67%, #00003E 76%) 0% 0% no-repeat padding-box;
     color: #ffffff;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .header {
@@ -26,10 +31,6 @@ body {
 }
 
 .landing {
-    position: absolute;
-    top: 15%;
-    left: 0;
-    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,21 +64,6 @@ body {
     cursor: pointer;
 }
 
-.background-animation {
-    height: 75%;
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 0;
-    transform: translate(-50%, -47.5%) scale(3.5);
-}
-
-.pseudo-landing {
-    height: 75%;
-    width: 100%;
-}
-
 .footer {
     height: 10%;
     font-size: 2.5rem;
@@ -95,4 +81,20 @@ body {
 
 .footer .social i {
     margin: 0 8px;
+    color: #ffffff;
+    transition: 0.25s;
+}
+
+.footer .social a:hover i {
+    color: hsla(180, 100%, 50%, 1);
+}
+
+.background-animation {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+    transform: translate(-50%, -47.5%) scale(3.5);
 }
