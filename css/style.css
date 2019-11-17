@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .page-wrapper {
@@ -8,6 +9,7 @@ body {
     height: 100vh;
     background: transparent radial-gradient(closest-side at 49% 1%, #00A2C1 0%, #006D96 18%, #003E70 37%, #001C55 53%, #000744 67%, #00003E 76%) 0% 0% no-repeat padding-box;
     color: #ffffff;
+    position: relative;
 }
 
 .header {
@@ -16,6 +18,7 @@ body {
     align-items: flex-end;
     justify-content: flex-start;
     padding: 0 4vw;
+    box-sizing: border-box;
 }
 
 .header .logo {
@@ -23,11 +26,16 @@ body {
 }
 
 .landing {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 75%;
+    width: 100%;
 }
 
 .landing .title {
@@ -35,13 +43,13 @@ body {
     letter-spacing: 4rem;
     line-height: 1;
     font-family: 'Teko', sans-serif;
+    transform: translateX(1.5rem);
 }
 
 .landing .theme {
     font-size: 3.5rem;
     letter-spacing: 0.75rem;
     font-family: 'Montserrat', sans-serif;
-    transform: translateX(-1.5rem);
 }
 
 .landing .register-button {
@@ -55,6 +63,21 @@ body {
     cursor: pointer;
 }
 
+.background-animation {
+    height: 75%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+    transform: translate(-50%, -47.5%) scale(3.5);
+}
+
+.pseudo-landing {
+    height: 75%;
+    width: 100%;
+}
+
 .footer {
     height: 10%;
     font-size: 2.5rem;
@@ -62,6 +85,7 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     padding: 0 4vw;
+    box-sizing: border-box;
 }
 
 .footer .countdown {
