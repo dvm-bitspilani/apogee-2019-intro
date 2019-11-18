@@ -67,7 +67,7 @@ body {
     background: transparent linear-gradient(248deg, #2A9CE852 0%, #006CFF6B 83%, #5914FF82 100%) 0% 0% no-repeat padding-box;
     border: 2px solid #ffffff;
     padding: 16px 40px;
-    margin: 8px;
+    margin: 6px;
     cursor: pointer;
 }
 
@@ -78,7 +78,7 @@ body {
 .landing .register-button::before, .landing .register-button::after{
     content:"";
     width: 0;
-    height: 4px;
+    height: 2px;
     position: absolute;
     transition: all 0.2s linear;
     background: #fff;
@@ -86,7 +86,7 @@ body {
   
 .landing .register-button span::before, .landing .register-button span::after{
     content:"";
-    width:4px;
+    width:2px;
     height:0;
     position: absolute;
     transition: all 0.2s linear;
@@ -185,7 +185,7 @@ body {
 
 .glitch:after {
     color: #f0f;
-    text-shadow: 4px 4px black;
+    text-shadow: 2px 2px black;
     z-index: -2;
     animation: glitch-left-2 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
 }
