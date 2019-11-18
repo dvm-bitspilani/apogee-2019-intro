@@ -4,7 +4,8 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: transparent radial-gradient(closest-side at 49% 1%, #00A2C1 0%, #006D96 18%, #003E70 37%, #001C55 53%, #000744 67%, #00003E 76%) 0% 0% no-repeat padding-box;
+    background: url('../assets/background.svg');
+    background-size: cover;
 }
 
 .page-wrapper {
@@ -54,15 +55,87 @@ body {
 }
 
 .landing .register-button {
-    background: transparent linear-gradient(248deg, #2A9CE852 0%, #006CFF6B 83%, #5914FF82 100%) 0% 0% no-repeat padding-box;
-    border: 2px solid #ffffff;
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.6rem;
-    padding: 16px 40px;
     margin-top: 10vh;
+    display: inline-block;
+    position: relative;
+}
+
+.landing .register-button > div {
+    background: transparent linear-gradient(248deg, #2A9CE852 0%, #006CFF6B 83%, #5914FF82 100%) 0% 0% no-repeat padding-box;
+    border: 2px solid #ffffff;
+    padding: 16px 40px;
+    margin: 8px;
     cursor: pointer;
 }
+
+.landing .register-button span{
+    display: block;
+}
+
+.landing .register-button::before, .landing .register-button::after{
+    content:"";
+    width: 0;
+    height: 4px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+}
+  
+.landing .register-button span::before, .landing .register-button span::after{
+    content:"";
+    width:4px;
+    height:0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #fff;
+}
+
+.landing .register-button:hover::before, .landing .register-button:hover::after{
+    width: 100%;
+}
+
+.landing .register-button:hover span::before, .landing .register-button:hover span::after{
+    height: 100%;
+}
+
+.landing .register-button::before, .landing .register-button::after{
+    transition-delay: 0s;
+}
+
+.landing .register-button span::before, .landing .register-button span::after{
+    transition-delay: 0.2s;
+}
+
+.landing .register-button::before{
+    right: 0;
+    top: 0;
+}
+
+.landing .register-button::after{
+    left: 0;
+    bottom: 0;
+}
+
+.landing .register-button span::before{
+    left: 0;
+    top: 0;
+}
+
+.landing .register-button span::after{
+    right: 0;
+    bottom: 0;
+}
+
+.landing .register-button:hover::before, .landing .register-button:hover::after{
+    transition-delay: 0.2s;
+}
+
+.landing .register-button:hover span::before, .landing .register-button:hover span::after{
+    transition-delay: 0s;
+}  
 
 .footer {
     height: 10%;
@@ -109,17 +182,21 @@ body {
     width: 100%;
     opacity: .8;
 }
+
 .glitch:after {
     color: #f0f;
-    text-shadow: 2px 2px black;
+    text-shadow: 4px 4px black;
     z-index: -2;
     animation: glitch-left-2 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
 }
+
 .glitch:before {
     color: #0ff;
     z-index: -1;
     animation: glitch-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
+
+
 @keyframes glitch-left {
     0% {
         transform: translate(0);
@@ -134,6 +211,7 @@ body {
         transform: translate(0);
     }
 }
+
 @keyframes glitch-left-2 {
     0% {
         transform: translate(0);
