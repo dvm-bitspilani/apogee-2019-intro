@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/background-animation.css">
@@ -24,7 +24,7 @@
                 THE GLITCH REPOSITORY
             </div>
             <div class="register-button">
-                <div>
+                <div onclick="toogleRegisterForm()">
                     <span>REGISTER</span>
                 </div>
             </div>
@@ -32,14 +32,53 @@
         <div class="footer">
             <div class="countdown" id="countdown">
                 <!-- Number of days remaining goes here -->
-                365 DAYS
             </div>
             <div class="social">
-                    <a href="https://twitter.com/bitsapogee/" target="_blank"><i class="fa fa-twitter-square"></i></a>
-                    <a href="https://www.facebook.com/bitsapogee/" target="_blank"><i class="fa fa-facebook-square"></i></a>
-                    <a href="https://www.instagram.com/bitsapogee/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/bitsapogee/" target="_blank"><i class="fab">&#xf081;</i></a>
+                    <a href="https://www.facebook.com/bitsapogee/" target="_blank"><i class="fab">&#xf082;</i></a>
+                    <a href="https://www.instagram.com/bitsapogee/" target="_blank"><i class="fab">&#xf16d;</i></a>
             </div>
         </div>
+
+
+        <!-- REGISTRATION FORM -->
+        <div class="form-container">
+            <i class='fas back-button' onclick="toogleRegisterForm()">&#xf060;</i>
+            <div class="heading">REGISTRATION</div>
+            <form name="registration">
+                <input type="text" name="name" id="name" placeholder="Name*" required>
+                <input type="text" name="city" id="city" placeholder="City*">
+                <select name="college" id="college">
+                    <option disabled selected>College*</option>
+                    <option value="dummy1">Dummy 1</option>
+                    <option value="dummy2">Dummy 2</option>
+                    <option value="dummy3">Dummy 3</option>
+                </select>
+                <input type="text" name="email" id="email" placeholder="Email*">
+                <div class="note">If you cannot find your college above, please contact- PCr (+91-9462011235)</div>
+                <input type="text" name="phone" id="phone" placeholder="Phone*">
+                <div class="field-wrapper">
+                    <label>Gender*</label>
+                    <div class="sub-field-wrapper"><input type="radio" name="gender" id="gender-male"><label for="gender-male">Male</label></div>
+                    <div class="sub-field-wrapper"><input type="radio" name="gender" id="gender-female"><label for="gender-female">Female</label></div>
+                    <div class="sub-field-wrapper"><input type="radio" name="gender" id="gender-other"><label for="gender-other">Other</label></div>
+                </div>
+                <div class="field-wrapper">
+                    <label>Year of Study*</label>
+                    <div class="sub-field-wrapper"><input type="radio" name="year" id="year-1"><label for="year-1">1</label></div>
+                    <div class="sub-field-wrapper"><input type="radio" name="year" id="year-2"><label for="year-2">2</label></div>
+                    <div class="sub-field-wrapper"><input type="radio" name="year" id="year-3"><label for="year-3">3</label></div>
+                    <div class="sub-field-wrapper"><input type="radio" name="year" id="year-4"><label for="year-4">4</label></div>
+                    <div class="sub-field-wrapper"><input type="radio" name="year" id="year-5"><label for="year-5">5</label></div>
+                </div>
+                <div class="form-button-container">
+                    <input type="submit" value="REGISTER">
+                    <input type="button" value="GO BACK" onclick="toogleRegisterForm()">
+                </div>
+            </form>
+            <div class="note">If you are not able to register using the above form, use this <a href="#">google form</a>.</div>
+        </div>
+    
     </div>
 
     <div class="noise-background"></div>
@@ -348,6 +387,7 @@
             <div class="c"></div>
         </div>
     </div>
+
 
     <script src="js/app.js"></script>
 </body>

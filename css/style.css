@@ -16,6 +16,7 @@ body {
     top: 0;
     left: 0;
     z-index: 2;
+    overflow: auto;
 }
 
 .header {
@@ -139,7 +140,7 @@ body {
 
 .footer {
     height: 9%;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -207,6 +208,155 @@ body {
     z-index: -1;
     animation: glitch-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
+
+
+
+
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Teko', sans-serif;
+}
+
+.form-container .heading {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    margin: 3vh 0;
+}
+
+.form-container form {
+    width: 100%;
+    padding: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.form-container form > * {
+    width: 40%;
+    margin: 1.5% 0;
+    font-size: 1.6rem;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 0.15rem;
+    color: #ffffff;
+    background: transparent;
+    outline: none;
+    padding: 8px 16px;
+}
+
+.form-container form select {
+    width: 42.5%;
+}
+
+.form-container form input[type=text], .form-container form select {
+    border: 4px solid #00ffff;
+}
+
+.form-container form input:focus, .form-container form select:focus {
+    border: 4px solid #ff00ff;
+}
+
+.form-container form input::placeholder {
+    color: #ffffff;
+    background: transparent;
+    opacity: 1;
+}
+
+.form-container form .field-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-container form .field-wrapper label {
+    width: 100%;
+}
+
+.form-container form .field-wrapper .sub-field-wrapper {
+    margin-right: 7.5%;
+}
+
+.form-container form .field-wrapper .sub-field-wrapper label {
+    cursor: pointer;
+}
+
+.form-container form .field-wrapper .sub-field-wrapper input[type=radio] {
+    visibility: hidden;
+    position: absolute;
+}
+
+.form-container form .field-wrapper .sub-field-wrapper input[type=radio] + label:before {
+    height: 10px;
+    width: 10px;
+    margin-right: 16px;
+    content: " ";
+    display: inline-block;
+    vertical-align: baseline;
+    border: 3px solid #0fffff;
+    padding: 2.5px;
+    cursor: pointer;
+}
+.form-container form .field-wrapper .sub-field-wrapper input[type=radio]:checked + label:before{
+    background: #ff00ff;
+    border: 3px solid #ff00ff;
+    background-clip: content-box;
+}
+
+.form-container form .field-wrapper .sub-field-wrapper input[type=radio] + label:before{
+    border-radius: 50%;
+}
+
+.form-container form .form-button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container form .form-button-container input {
+    font-size: 1.75rem;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    font-family: 'Teko', sans-serif;
+    padding: 8px 40px;
+    color: #ffffff;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    border: 6px solid #ffffff;
+    margin: 0 32px;
+}
+
+.form-container form .form-button-container input[type=submit] {
+    border: 6px solid #ff00ff;
+}
+
+.form-container .back-button {
+    font-size: 3rem;
+    color: #ffffff;
+    position: absolute;
+    top: 6.5%;
+    right: 3.5vw;
+    cursor: pointer;
+}
+
+.form-container > .note {
+    font-size: 1.75rem;
+    color: #ffffff;
+    letter-spacing: 0.2rem;
+    margin: 1.5%;
+}
+
+.form-container > .note > a, .form-container > .note > a:active, .form-container > .note > a:visited {
+    color: #00ffff;
+}
+
+
 
 
 @keyframes glitch-left {
