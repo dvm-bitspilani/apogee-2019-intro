@@ -19,16 +19,16 @@ body {
 }
 
 .header {
-    height: 15%;
+    height: 11%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 0 4vw;
+    padding: 0 3.5vw;
     box-sizing: border-box;
 }
 
 .header .logo {
-    height: 70%;
+    height: 55%;
 }
 
 .landing {
@@ -36,12 +36,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 75%;
+    height: 80%;
     width: 100%;
 }
 
 .landing .title {
-    font-size: 15rem;
+    font-size: 12.5rem;
     letter-spacing: 4rem;
     line-height: 1;
     font-family: 'Teko', sans-serif;
@@ -49,13 +49,13 @@ body {
 }
 
 .landing .theme {
-    font-size: 3.5rem;
-    letter-spacing: 0.75rem;
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
     font-family: 'Montserrat', sans-serif;
 }
 
 .landing .register-button {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.6rem;
     margin-top: 10vh;
@@ -67,7 +67,7 @@ body {
     background: transparent linear-gradient(248deg, #2A9CE852 0%, #006CFF6B 83%, #5914FF82 100%) 0% 0% no-repeat padding-box;
     border: 2px solid #ffffff;
     padding: 16px 40px;
-    margin: 6px;
+    margin: 5px;
     cursor: pointer;
 }
 
@@ -138,12 +138,12 @@ body {
 }  
 
 .footer {
-    height: 10%;
+    height: 9%;
     font-size: 2.5rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0 4vw;
+    padding: 0 3.5vw;
     box-sizing: border-box;
 }
 
@@ -169,7 +169,7 @@ body {
     left: 50%;
     top: 50%;
     z-index: 0;
-    transform: translate(-50%, -47.5%) scale(3.5);
+    transform: translate(-50%, -47.5%) scale(3);
 }
 
 .glitch:before, .glitch:after {
