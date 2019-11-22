@@ -271,7 +271,7 @@ html, body {
     border: 3.5px solid #B02C8D;
 }
 
-.form-container form input:-internal-autofill-selected {
+.form-container form input:-webkit-autofill-selected {
     background: transparent;
     color: #ffffff;
 }
