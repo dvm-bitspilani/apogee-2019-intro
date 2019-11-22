@@ -271,6 +271,11 @@ html, body {
     border: 3.5px solid #B02C8D;
 }
 
+.form-container form input:-internal-autofill-selected {
+    background: transparent;
+    color: #ffffff;
+}
+
 .form-container form input::placeholder {
     color: #ffffff;
     background: transparent;
