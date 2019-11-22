@@ -42,7 +42,6 @@ const toogleRegisterForm = () => {
 toogleRegisterForm();
 
 const clearAnimation = () => {
-    console.log('chala')
     document.getElementsByClassName('form-container')[0].style.animation = 'none';
     document.getElementsByClassName('landing')[0].style.animation = 'none';
 }
