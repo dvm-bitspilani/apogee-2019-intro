@@ -3,7 +3,7 @@ $total: 300; // total particles
 $orb-size: 100px;
 $particle-size: 2px;
 $time: 20s;
-$base-hue: 0; // change for diff colors (180 is nice)
+$base-hue: 180; // change for diff colors (180 is nice)
 
 .wrap {
   position: relative;
@@ -38,7 +38,7 @@ $base-hue: 0; // change for diff colors (180 is nice)
   .c:nth-child(#{$i}){ // grab the nth particle
     animation: orbit#{$i} $time infinite;
     animation-delay: ($i * .01s); 
-    background-color: hsla(180, 100%, 50%, 1);
+    background-color: hsla($hue, 100%, 50%, 1);
   }
 
   @keyframes orbit#{$i}{ 
