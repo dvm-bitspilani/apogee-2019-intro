@@ -276,6 +276,11 @@ html, body {
     color: #ffffff;
 }
 
+.form-container form input:-webkit-autofill {
+    background: transparent;
+    color: #ffffff;
+}
+
 .form-container form input::placeholder {
     color: #ffffff;
     background: transparent;
