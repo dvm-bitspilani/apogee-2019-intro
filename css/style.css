@@ -417,7 +417,7 @@ html, body {
 
     .background-animation {
         transform: translate(-50%, -47.5%) scale(1.5);
-    }    
+    }
 
     .form-container .heading {
         font-size: 2rem;
@@ -440,13 +440,11 @@ html, body {
     }
 
     .form-container form #email {
-        transform: translateY(calc(100% + 4vh));
+        transform: translateY(calc(100% + 8vh));
     }
 
     .form-container form .note {
         transform: translateY(calc(-100%));
-        padding-top: 0;
-        margin-top: 0;
     }
 
     .form-container form .field-wrapper .sub-field-wrapper input[type=radio] + label:before {
@@ -500,6 +498,10 @@ html, body {
     .landing .theme {
         font-size: 0.6rem;
         letter-spacing: 0.5rem;
+    }
+
+    .background-animation {
+        transform: translate(-50%, -47.5%) scale(1.25);
     }
 
     .form-container form > * {
