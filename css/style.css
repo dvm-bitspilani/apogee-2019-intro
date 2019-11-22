@@ -383,14 +383,14 @@ html, body {
     }
 
     .landing .title {
-        font-size: 5rem;
+        font-size: 4.75rem;
         letter-spacing: 1.75rem;
         line-height: 1.25;
         transform: translateX(0.75rem);
     }
 
     .landing .theme {
-        font-size: 1rem;
+        font-size: 0.9rem;
         letter-spacing: 0.5rem;
         transform: translateX(0.25rem);
     }
@@ -488,6 +488,18 @@ html, body {
 @media (max-width: 350px) {
     .form-container .heading {
         font-size: 1.75rem;
+    }
+
+    .landing .title {
+        font-size: 4rem;
+        letter-spacing: 1.75rem;
+        line-height: 1.25;
+        transform: translateX(0.75rem);
+    }
+
+    .landing .theme {
+        font-size: 0.6rem;
+        letter-spacing: 0.5rem;
     }
 
     .form-container form > * {
