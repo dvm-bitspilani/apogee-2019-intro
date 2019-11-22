@@ -24,7 +24,7 @@ const toogleRegisterForm = () => {
             document.getElementsByClassName('form-container')[0].style.display = 'flex';
             document.getElementsByClassName('form-container')[0].style.animation = 'glitch-transition 1s';
             setTimeout(clearAnimation, 1000);
-        });
+        }, 1000);
     } else {
         document.getElementsByClassName('form-container')[0].style.animation = 'glitch-transition 1s';
 
@@ -35,13 +35,14 @@ const toogleRegisterForm = () => {
             document.getElementsByClassName('form-container')[0].style.display = 'none';
             document.getElementsByClassName('landing')[0].style.animation = 'glitch-transition 1s';
             setTimeout(clearAnimation, 1000);
-        });
+        }, 1000);
     }
 }
 
 toogleRegisterForm();
 
 const clearAnimation = () => {
-    document.getElementsByClassName('form-container')[0].style.animation = 'glitch-transition 1s';
-    document.getElementsByClassName('landing')[0].style.animation = 'glitch-transition 1s';
+    console.log('chala')
+    document.getElementsByClassName('form-container')[0].style.animation = 'none';
+    document.getElementsByClassName('landing')[0].style.animation = 'none';
 }
