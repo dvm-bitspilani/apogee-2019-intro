@@ -14,17 +14,34 @@ const setTime = () => {
 window.onload = setTime;
 
 const toogleRegisterForm = () => {
-    if (document.getElementsByClassName('form-container')[0].style.display == 'none') {
-        document.getElementsByClassName('landing')[0].style.display = 'none';
-        document.getElementsByClassName('footer')[0].style.display = 'none';
-        document.getElementsByClassName('background-animation')[0].style.display = 'none';
-        document.getElementsByClassName('form-container')[0].style.display = 'flex'
+    if (document.getElementsByClassName('form-container')[0].style.display == 'none') {        
+        document.getElementsByClassName('landing')[0].style.animation = 'glitch-transition 1s';
+
+        setTimeout(() => {
+            document.getElementsByClassName('landing')[0].style.display = 'none';
+            document.getElementsByClassName('footer')[0].style.display = 'none';
+            document.getElementsByClassName('background-animation')[0].style.display = 'none';
+            document.getElementsByClassName('form-container')[0].style.display = 'flex';
+            document.getElementsByClassName('form-container')[0].style.animation = 'glitch-transition 1s';
+            setTimeout(clearAnimation, 1000);
+        });
     } else {
-        document.getElementsByClassName('landing')[0].style.display = 'flex';
-        document.getElementsByClassName('footer')[0].style.display = 'flex';
-        document.getElementsByClassName('background-animation')[0].style.display = 'initial';
-        document.getElementsByClassName('form-container')[0].style.display = 'none'
+        document.getElementsByClassName('form-container')[0].style.animation = 'glitch-transition 1s';
+
+        setTimeout(() => {
+            document.getElementsByClassName('landing')[0].style.display = 'flex';
+            document.getElementsByClassName('footer')[0].style.display = 'flex';
+            document.getElementsByClassName('background-animation')[0].style.display = 'initial';
+            document.getElementsByClassName('form-container')[0].style.display = 'none';
+            document.getElementsByClassName('landing')[0].style.animation = 'glitch-transition 1s';
+            setTimeout(clearAnimation, 1000);
+        });
     }
 }
 
 toogleRegisterForm();
+
+const clearAnimation = () => {
+    document.getElementsByClassName('form-container')[0].style.animation = 'glitch-transition 1s';
+    document.getElementsByClassName('landing')[0].style.animation = 'glitch-transition 1s';
+}
