@@ -260,11 +260,11 @@ body {
 }
 
 .form-container form input[type=text], .form-container form select {
-    border: 4px solid #00ffff;
+    border: 3.5px solid #00ffff;
 }
 
 .form-container form input:focus, .form-container form select:focus {
-    border: 4px solid #ff00ff;
+    border: 3.5px solid #B02C8D;
 }
 
 .form-container form input::placeholder {
@@ -307,8 +307,8 @@ body {
     cursor: pointer;
 }
 .form-container form .field-wrapper .sub-field-wrapper input[type=radio]:checked + label:before{
-    background: #ff00ff;
-    border: 3px solid #ff00ff;
+    background: #B02C8D;
+    border: 3px solid #B02C8D;
     background-clip: content-box;
 }
 
@@ -325,7 +325,7 @@ body {
 
 .form-container form .form-button-container input {
     font-size: 1.75rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.25rem;
     font-weight: bold;
     font-family: 'Teko', sans-serif;
     padding: 8px 40px;
@@ -333,12 +333,12 @@ body {
     background: transparent;
     outline: none;
     cursor: pointer;
-    border: 6px solid #ffffff;
+    border: 5px solid #ffffff;
     margin: 0 32px;
 }
 
 .form-container form .form-button-container input[type=submit] {
-    border: 6px solid #ff00ff;
+    border: 5px solid #B02C8D;
 }
 
 .form-container .back-button {
@@ -353,7 +353,7 @@ body {
 .form-container > .note {
     font-size: 1.75rem;
     color: #ffffff;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.15rem;
     margin: 1.5%;
 }
 
