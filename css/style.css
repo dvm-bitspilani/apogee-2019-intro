@@ -175,7 +175,7 @@ body {
 }
 
 .noise-background {
-    background: url('http://api.thumbr.it/whitenoise-361x370.png?background=00000000&noise=626262&density=30&opacity=20');
+    background: url('http://api.thumbr.it/whitenoise-361x370.png?background=00000000&noise=626262&density=40&opacity=25');
     height: 300%;
     width: 300%;
     background-repeat: repeat;
