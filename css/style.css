@@ -382,6 +382,43 @@ body {
         padding-top: 0.5vh;
     }
 
+    .landing .title {
+        font-size: 5rem;
+        letter-spacing: 1.75rem;
+        line-height: 1.25;
+        transform: translateX(0.75rem);
+    }
+
+    .landing .theme {
+        font-size: 1rem;
+        letter-spacing: 0.5rem;
+        transform: translateX(0.25rem);
+    }
+
+    .landing .register-button {
+        font-size: 1rem;
+        letter-spacing: 0.4rem;
+        margin-top: 5vh;
+    }
+
+    .landing .register-button > div {
+        padding: 14px 30px;
+        margin: 4px;
+    }
+
+    .footer {
+        font-size: 1.75rem;
+        padding: 0 4vw;
+    }
+
+    .footer .social i {
+        margin: 0 6px;
+    }
+
+    .background-animation {
+        transform: translate(-50%, -47.5%) scale(1.5);
+    }    
+
     .form-container .heading {
         font-size: 2rem;
         letter-spacing: 0.3rem;

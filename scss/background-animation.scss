@@ -27,7 +27,16 @@ $base-hue: 180; // change for diff colors (180 is nice)
   width: $particle-size;
   height: $particle-size;
   border-radius: 50%;
-  opacity: 0; 
+  opacity: 0;
+}
+@media (max-width: 600px) {
+  .c {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    opacity: 0; 
+  }
 }
 
 @for $i from 1 through $total {
