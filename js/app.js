@@ -1,4 +1,5 @@
 const EVENT_DATE = new Date("March 27, 2020 23:59:59").getTime();
+const URL = 'bits-apgee.org/registrations/introreg/';
 
 const setTime = () => {
     const timeNow = new Date().getTime();
@@ -11,7 +12,6 @@ const setTime = () => {
     document.getElementById("countdown").innerHTML = days + ' DAYS';
 }
 
-window.onload = setTime;
 
 const toogleRegisterForm = () => {
     if (document.getElementsByClassName('form-container')[0].style.display == 'none') {        
@@ -39,9 +39,49 @@ const toogleRegisterForm = () => {
     }
 }
 
-toogleRegisterForm();
-
 const clearAnimation = () => {
     document.getElementsByClassName('form-container')[0].style.animation = 'none';
     document.getElementsByClassName('landing')[0].style.animation = 'none';
+}
+
+
+const form = document.getElementsByTagName('form')[0];
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const data = new FormData(form);
+    const body = {};
+    for (const entry of data) {
+        body[entry[0]] = entry[1];
+    };
+
+    if(!body.gender || !body.year) {
+        alert('Incomplete form data! Please fill all the required fields.');
+        return;
+    }
+
+    const params = {
+        header: {
+            "content-type": "application/json; charset=UTF-8"
+        },
+        body,
+        method: "POST"
+    }
+
+    fetch(URL, params).then(data => {
+        
+    }).then(response => {
+
+    }).then(error => {
+
+    });
+
+}, false);
+
+
+
+window.onload = () => {
+    setTime();
+    toogleRegisterForm();
 }
