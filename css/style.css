@@ -291,6 +291,24 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     padding: 8px 0;
+    position: relative;
+}
+
+.form-container form .field-wrapper > input {
+  width: 100%;
+  border: 3.5px solid #00ffff;
+  font-size: 1.6rem;
+  font-family: 'Teko', sans-serif;
+  letter-spacing: 0.15rem;
+  color: #ffffff;
+  background: transparent;
+  outline: none;
+  padding: 8px 16px;
+  box-sizing: border-box;
+}
+
+.form-container form .field-wrapper > input:focus {
+  border: 3.5px solid #B02C8D;
 }
 
 .form-container form .field-wrapper label {
@@ -449,6 +467,12 @@ html, body {
         margin: 4% 0;
         padding: 6px 12px;
     }
+    
+    .form-container form .field-wrapper > input {
+        padding: 6px 12px;
+        font-size: 1.25rem;
+        letter-spacing: 0.1rem;
+    }
 
     .form-container form #email {
         transform: translateY(calc(100% + 8vh));
@@ -516,6 +540,10 @@ html, body {
     }
 
     .form-container form > * {
+        font-size: 1rem;
+    }
+    
+    .form-container form .field-wrapper > input {
         font-size: 1rem;
     }
 

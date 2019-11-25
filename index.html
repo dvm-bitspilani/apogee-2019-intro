@@ -48,12 +48,13 @@
             <form name="registration">
                 <input type="text" name="name" id="name" placeholder="Name*" required>
                 <input type="text" name="city" id="city" placeholder="City*">
-                <select name="college" id="college">
-                    <option disabled selected>College*</option>
-                    <option value="dummy1">Dummy 1</option>
-                    <option value="dummy2">Dummy 2</option>
-                    <option value="dummy3">Dummy 3</option>
-                </select>
+                <div class="field-wrapper">
+                    <input list="college_input" placeholder="College*" autocomplete="off" onclick="this.focus()" id="college" onfocus="showData('college_input')">
+                    <datalist id="college_input" autocomplete="off">
+                        <option disabled id="loading">Loading...</option>
+                        <!-- COLLEGES LIST GOES HERE -->
+                    </datalist>
+                </div>
                 <input type="text" name="email" id="email" placeholder="Email*">
                 <div class="note">If you cannot find your college above, please contact- PCr (+91-8445006699)</div>
                 <input type="text" name="phone" id="phone" placeholder="Phone*">
@@ -76,7 +77,7 @@
                     <input type="button" value="GO BACK" onclick="toogleRegisterForm()">
                 </div>
             </form>
-            <div class="note">If you are not able to register using the above form, use this <a href="#">google form</a>.</div>
+            <div class="note">If you are not able to register using the above form, use this <a href="https://forms.gle/EnsMKTv9ri4x3XJQ9" target="_blank">google form</a>.</div>
         </div>
     
     </div>

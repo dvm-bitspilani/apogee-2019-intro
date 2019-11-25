@@ -1,5 +1,6 @@
 const EVENT_DATE = new Date("March 27, 2020 23:59:59").getTime();
-const URL = 'bits-apgee.org/registrations/introreg/';
+const REGISTRATIONS_URL = 'https://bits-apogee.org/registrations/introreg';
+const COLLEGE_URL = 'https://bits-apogee.org/registrations/get_college';
 
 const setTime = () => {
     const timeNow = new Date().getTime();
@@ -45,6 +46,36 @@ const clearAnimation = () => {
 }
 
 
+const getCollegesList = () => {
+    fetch(COLLEGE_URL).then(data => {
+        return data.json();
+    }).then(response => {
+        document.getElementsByTagName('datalist')[0].removeChild(document.getElementById('loading'));
+
+        response.data.map(college => {
+            const option = document.createElement('option');
+            option.value = college.name;
+            option.id = college.id;
+            option.innerHTML = college.name;
+            document.getElementById('college_input').appendChild(option);
+        });
+    });
+}
+
+
+const getCollegeId = () => {
+    const input = document.getElementById('college');
+    const val = input.value;
+    const options = document.getElementById('college_input').childNodes;
+
+    for(let i = 0; i < options.length; i++) {
+        if(options[i].innerText === val) {
+            return options[i].id;
+        }
+    }
+}
+
+
 const form = document.getElementsByTagName('form')[0];
 
 form.addEventListener("submit", function(event) {
@@ -56,32 +87,50 @@ form.addEventListener("submit", function(event) {
         body[entry[0]] = entry[1];
     };
 
-    if(!body.gender || !body.year) {
+    body.college = getCollegeId();
+
+    if(!body.gender || !body.year || !body.college) {
         alert('Incomplete form data! Please fill all the required fields.');
         return;
     }
 
     const params = {
-        header: {
-            "content-type": "application/json; charset=UTF-8"
+        headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json"
         },
-        body,
+        body: JSON.stringify(body),
         method: "POST"
     }
 
-    fetch(URL, params).then(data => {
-        
+    fetch(REGISTRATIONS_URL, params).then(data => {
+        return data.json();
     }).then(response => {
-
-    }).then(error => {
-
+        if (response.message) {
+            alert(response.message);
+            return;
+        }
+        alert('Registration successfull!');
+        toogleRegisterForm();
+    }).catch(error => {
+        alert("ERROR: " + error + '\n Contact administrator');
     });
 
 }, false);
 
 
 
+function showData(id) {
+    const eOpts = document.querySelectorAll('#' + id + ' > option');
+    for(i = 0; i < eOpts.length; i++) {
+        eOpts[i].style.display = 'block';
+    }
+}
+
+
+
 window.onload = () => {
-    setTime();
     toogleRegisterForm();
+    setTime();
+    getCollegesList();
 }
