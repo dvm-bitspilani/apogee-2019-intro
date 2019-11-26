@@ -182,7 +182,7 @@ html, body {
 }
 
 .noise-background {
-    background: url('http://api.thumbr.it/whitenoise-361x370.png?background=00000000&noise=626262&density=40&opacity=25');
+    background: url('../assets/noise.png');
     height: 300%;
     width: 300%;
     background-repeat: repeat;
@@ -408,8 +408,9 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: -1;
+  z-index: 3;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 .message-box > img {
