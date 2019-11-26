@@ -141,7 +141,6 @@ html, body {
 
 .footer {
     height: 9%;
-    font-size: 2.25rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -151,16 +150,17 @@ html, body {
 
 .footer .countdown {
     font-weight: bold;
+    font-size: 2.25rem;
     font-family: 'Teko', sans-serif;
 }
 
-.footer .social i {
+.footer .social img {
     margin: 0 8px;
-    color: #ffffff;
-    transition: 0.25s;
+    width: 35px;
+    height: 35px;
 }
 
-.footer .social a:hover i {
+.footer .social a:hover img {
     -webkit-animation: icon3d 200ms infinite;
     animation: icon3d 200ms infinite;
 }
@@ -379,8 +379,8 @@ html, body {
 }
 
 .form-container .back-button {
-    font-size: 3rem;
-    color: #ffffff;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: 6.5%;
     right: 3.5vw;
@@ -396,6 +396,29 @@ html, body {
 
 .form-container > .note > a, .form-container > .note > a:active, .form-container > .note > a:visited {
     color: #00ffff;
+}
+
+.message-box {
+  padding: 64px 80px;
+  background: #dddddd;
+  color: #444444;
+  font-size: 1.75rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Teko', sans-serif;  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.message-box > img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
 }
 
 
@@ -436,12 +459,15 @@ html, body {
     }
 
     .footer {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         padding: 0 4vw;
     }
 
-    .footer .social i {
+    .footer .social img {
         margin: 0 6px;
+        width: 25px;
+        height: 25px;
+        transform: translateY(22.5%);
     }
 
     .background-animation {
@@ -501,7 +527,8 @@ html, body {
     }
 
     .form-container .back-button {
-        font-size: 1.75rem;
+        width: 30px;
+        height: 30px;
         top: 3.5%;
         right: 5vw;
     }
@@ -1013,4 +1040,28 @@ html, body {
 		-webkit-clip-path: polygon(0 72%, 100% 72%, 100% 78%, 0 78%);
 		clip-path: polygon(0 72%, 100% 72%, 100% 78%, 0 78%);
 	}
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(50%);
+    opacity: 0;
+  }
 }
