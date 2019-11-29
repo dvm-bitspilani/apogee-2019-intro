@@ -73,6 +73,31 @@ const getCollegeId = () => {
             return options[i].id;
         }
     }
+
+    if (val) {
+        return '%NOT_FOUND%';
+    }
+}
+
+
+const showMessage = (msg) => {
+    const messageBox = document.getElementsByClassName('message-box')[0];
+    messageBox.style.display = 'initial';
+    document.getElementById('message').innerHTML = msg;
+    messageBox.style.animation = 'slideIn 0.5s';
+    setTimeout(() => {
+        messageBox.style.animation = 'none';
+    }, 500);
+}
+
+const closeMessage = () => {
+    const messageBox = document.getElementsByClassName('message-box')[0];
+    messageBox.style.animation = 'slideOut 0.5s';
+    setTimeout(() => {
+        document.getElementById('message').innerHTML = '';
+        messageBox.style.animation = 'none';
+        messageBox.style.display = 'none';
+    }, 500);
 }
 
 
@@ -90,7 +115,12 @@ form.addEventListener("submit", function(event) {
     body.college = getCollegeId();
 
     if(!body.gender || !body.year || !body.college) {
-        alert('Incomplete form data! Please fill all the required fields.');
+        showMessage('Incomplete form data! Please fill all the required fields.');
+        return;
+    }
+
+    if (body.college == '%NOT_FOUND%') {
+        showMessage('Invalid college name! Please select one from the list, if not found contact- PCr (+91-7838773681).');
         return;
     }
 
@@ -107,13 +137,13 @@ form.addEventListener("submit", function(event) {
         return data.json();
     }).then(response => {
         if (response.message) {
-            alert(response.message);
+            showMessage(response.message);
             return;
         }
-        alert('Registration successfull!');
+        showMessage('Registration successfull!');
         toogleRegisterForm();
     }).catch(error => {
-        alert("ERROR: " + error + '\n Contact administrator');
+        showMessage("ERROR: " + error + '\n Contact administrator');
     });
 
 }, false);

@@ -263,7 +263,7 @@ html, body {
     box-sizing: border-box;
 }
 
-.form-container form input[type=text], .form-container form select {
+.form-container form input[type=text], .form-container form select, .form-container form input[type=email], .form-container form input[type=number] {
     border: 3.5px solid #00ffff;
 }
 
@@ -634,25 +634,6 @@ html, body {
         transform:translate(-10%, 10%);
     }
 }
-
-@keyframes icon3d {
-    0% {
-      text-shadow: 5px 4px rgba(244,67,54,1), -5px -6px rgba(33,150,243,1);
-    }
-    25% {
-      text-shadow: -5px -6px rgba(244,67,54,1), 5px 4px rgba(33,150,243,1);
-    }
-    50% {
-      text-shadow: 5px -4px rgba(244,67,54,1), -8px 4px rgba(33,150,243,1);
-    }
-    75% {
-      text-shadow: -8px -4px rgba(244,67,54,1), -5px -4px rgba(33,150,243,1);
-    }
-    100% {
-      text-shadow: -5px 0 rgba(244,67,54,1), 5px -4px rgba(33,150,243,1);
-    }
-}
-
 
 @-webkit-keyframes glitch-anim {
     0% {
@@ -1045,24 +1026,24 @@ html, body {
 
 @keyframes slideIn {
   from {
-    transform: translateY(-50%);
+    transform: translate(-50%,-150%);
     opacity: 0;
   }
 
   to {
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
     opacity: 1;
   }
 }
 
 @keyframes slideOut {
   from {
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
     opacity: 1;
   }
 
   to {
-    transform: translateY(50%);
+    transform: translate(-50%,150%);
     opacity: 0;
   }
 }

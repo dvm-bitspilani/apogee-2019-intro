@@ -42,7 +42,8 @@ $base-hue: 180; // change for diff colors (180 is nice)
 @for $i from 1 through $total {
   $z: (random(360) * 1deg); // random angle to rotateZ
   $y: (random(360) * 1deg); // random to rotateX
-  $hue: ((180/$total * $i) + $base-hue); // set hue
+  // $hue: ((180/2 * $i) + $base-hue); // set hue
+  $hue: $base-hue * $i;
   
   .c:nth-child(#{$i}){ // grab the nth particle
     animation: orbit#{$i} $time infinite;
