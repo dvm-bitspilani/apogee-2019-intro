@@ -142,6 +142,33 @@ body {
   transition-delay: 0s;
 }
 
+.landing .ca-portal-link {
+  margin-top: 4vh;
+}
+
+.landing .ca-portal-link a {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  padding-bottom: 10px;
+  transition: 0.25s;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+
+.landing .ca-portal-link a:hover {
+  padding-bottom: 4px;
+  border-bottom: 2px solid #ffffff;
+}
+
+.landing .ca-portal-link a:active, .landing .ca-portal-link a:visited {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
 .footer {
   height: 9%;
   display: flex;
