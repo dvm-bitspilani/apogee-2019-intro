@@ -17,6 +17,7 @@ const setTime = () => {
 const toogleRegisterForm = () => {
     if (document.getElementsByClassName('form-container')[0].style.display == 'none') {        
         document.getElementsByClassName('landing')[0].style.animation = 'glitch-transition 0.5s';
+        document.getElementsByClassName('ca-portal-link')[0].style.display = 'none';
 
         setTimeout(() => {
             document.getElementsByClassName('landing')[0].style.display = 'none';
@@ -35,6 +36,7 @@ const toogleRegisterForm = () => {
             document.getElementsByClassName('background-animation')[0].style.display = 'initial';
             document.getElementsByClassName('form-container')[0].style.display = 'none';
             document.getElementsByClassName('landing')[0].style.animation = 'glitch-transition 0.5s';
+            document.getElementsByClassName('ca-portal-link')[0].style.display = 'block';
             setTimeout(clearAnimation, 500);
         }, 500);
     }
